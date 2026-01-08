@@ -1,0 +1,41 @@
+@media (min-width: 32.5em) {
+  #menu {
+    display: none;
+  }
+
+  #primarynav {
+    display: block;
+  }
+
+  #primarynav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 1rem;
+    background: none;
+  }
+
+  #primarynav li {
+    border: none;
+  }
+
+  .about-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (min-width: 50em) {
+  main {
+    padding: 2rem;
+  }
+
+  .about-grid img {
+    max-height: 400px;
+  }
+}
