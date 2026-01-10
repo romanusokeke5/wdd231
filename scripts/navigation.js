@@ -1,17 +1,14 @@
-const hambutton = document.querySelector('#menu');
-const mainnav = document.querySelector('#primarynav');
+const hamburger = document.getElementById("hamburger");
+const navUl = document.querySelector(".navigation ul");
 
-hambutton.addEventListener('click', () => {
-  mainnav.classList.toggle('open');
-  hambutton.classList.toggle('open');
-  const expanded = hambutton.getAttribute('aria-expanded') === 'true';
-  hambutton.setAttribute('aria-expanded', !expanded);
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  navUl.classList.toggle("open");
 });
 
-// Wayfinding: Highlight active page
-document.querySelectorAll('nav a').forEach(link => {
-  if (link.getAttribute('href') === window.location.pathname.split('/').pop() || 
-      (window.location.pathname === '/' && link.textContent.trim() === 'Home')) {
-    link.classList.add('active');
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 767) {
+    navUl.classList.remove("open");
+    hamburger.classList.remove("open");
   }
 });
