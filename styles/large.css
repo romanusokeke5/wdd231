@@ -40,9 +40,7 @@
  .hero {
   text-align: left;
   padding-left: 2rem; /* Adjust spacing from left edge */
-}
 
-.hero {
   margin-left: 0;
   margin-bottom: 2rem;
   /* Optional: narrower for "section-like" feel */
