@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | WDD 231 | Okeke Romanus</title>
+  <meta name="description" content="Home page for WDD 231 course demonstrating responsive design and dynamic content.">
+  <meta name="author" content="Okeke Romanus">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Site logo" class="logo">
+    <div class="sitename">Okeke Romanus</div>
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+  </header>
+  <nav class="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="chamber.html">Chamber</a></li>
+      <li><a href="final.html">Final</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Home</h1>
+    <section class="hero">
+      <h2>.</h2>
+    </section>
+     <section class="about">
+       <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am Okeke Romanus a Software Development student focused on building responsive and accessible web applications. I am developing strong skills in HTML, CSS, and JavaScript while applying modern web design best practices. My goal is to continue growing as a developer and create user-friendly solutions through clean, efficient code.</p>
+      </div>
+    </section>
+    <section class="student-photo">
+      <h2>Student photo </h2>
+      <img src="images/student.jpg" alt="Photo of Your Name, Web Development student">
+    </section>
+    <section class="cert-courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="cse">CSE</button>
+        <button class="filter-btn" data-category="wdd">WDD</button>
+        <button class="filter-btn" data-category="wod">WOD</button>
+      </div>
+      <div id="course-list" class="course-grid"></div>
+      <p>Total Credits Required: <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/romanus-okeke-26510b369/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/romanusokeke5" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <img src="images/github.jpeg" alt="GitHub">
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> Okeke Romanus | Nigeria,</p>
+    <p id="lastModified">Last modified: </p>
+  </footer>
+</body>
+</html>

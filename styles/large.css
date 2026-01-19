@@ -1,0 +1,80 @@
+@media screen and (min-width: 768px) {
+  /* ... same header/nav/main padding ... */
+
+  .about_text {
+    grid-template-columns: 1fr 400px; /* Text left wide, img right fixed square */
+    gap: 2.5rem;
+    align-items: start;
+    color: #2c3e50;
+    padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+  }
+}
+    /* Left tall block */
+
+  .student-photo {
+    margin: 0; /* No auto, stick right */
+  }
+
+  .student-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* No distort, fill square */
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Footer row: social left, © center, mod right */
+  .footer {
+    justify-content: space-between;
+  }
+
+  .footer > *:nth-child(2) {
+    flex: 1;
+    text-align: center;
+  }
+  
+ .hero {
+  text-align: left;
+  padding-left: 2rem; /* Adjust spacing from left edge */
+
+  margin-left: 0;
+  margin-bottom: 2rem;
+  /* Optional: narrower for "section-like" feel */
+  max-width: max-content;
+
+}
+/* styles/large.css */
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* About is wider, Photo is narrower */
+    gap: 20px;
+    align-items: start;
+    max-width: 10000px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  /* Force the Home H1 and the Courses section to span full width */
+  .hero, .cert-courses {
+    grid-column: 1 / -1;
+  } 
+
+  /* Adjust Student Photo for desktop */
+  .student-photo img {
+    max-width: 100%; /* Fill the 1fr column */
+    height: auto;
+    padding: 10px;
+  }
+  
+  /* Ensure the About section stretches to look uniform */
+  .about {
+    height: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "IDWEB",
+      "address": "2115 S Vista Avenue, Boise ID 83705",
+      "phone": "+12083423986",
+      "phoneDisplay": "(208) 342-3986",
+      "website": "https://idahowebsites.com/",
+      "image": "idweb.png",
+      "membershipLevel": 3,
+      "tagline": "Web design and digital solutions"
+    },
+    {
+      "name": "Surge Web Design",
+      "address": "4072 E Arch Dr, Meridian ID 83646",
+      "phone": "+12086310640",
+      "phoneDisplay": "(208) 631-0640",
+      "website": "https://www.surgewebdesign.com/",
+      "image": "surge.png",
+      "membershipLevel": 2,
+      "tagline": "Modern websites for growing businesses"
+    },
+    {
+      "name": "Graphiczen",
+      "address": "1788 E Summerplace Court, Meridian ID 83646",
+      "phone": "+12086314984",
+      "phoneDisplay": "(208) 631-4984",
+      "website": "https://graphiczen.com/",
+      "image": "graphiczen.png",
+      "membershipLevel": 2,
+      "tagline": "Branding, graphics, and creative services"
+    },
+    {
+      "name": "Peppershock Media",
+      "address": "1215 3rd Street, Nampa ID 83651",
+      "phone": "+12084615070",
+      "phoneDisplay": "(208) 461-5070",
+      "website": "https://www.peppershock.com/",
+      "image": "peppershock.png",
+      "membershipLevel": 3,
+      "tagline": "Marketing and media production"
+    },
+    {
+      "name": "Flash Tech Services",
+      "address": "Star ID 83669",
+      "phone": "+12084888510",
+      "phoneDisplay": "(208) 488-8510",
+      "website": "https://flashtechservices.com/",
+      "image": "flashtech.png",
+      "membershipLevel": 1,
+      "tagline": "IT services and support"
+    },
+    {
+      "name": "Metro Express Car Wash",
+      "address": "1725 E Overland Road, Meridian ID 83642",
+      "phone": "+12088884073",
+      "phoneDisplay": "(208) 888-4073",
+      "website": "https://www.metroexpresscarwash.com/",
+      "image": "metro.png",
+      "membershipLevel": 1,
+      "tagline": "Fast, friendly car wash service"
+    },
+    {
+      "name": "Roaring Springs Waterpark",
+      "address": "400 W Overland Road, Meridian ID 83642",
+      "phone": "+12088844900",
+      "phoneDisplay": "(208) 884-4900",
+      "website": "https://roaringsprings.com/",
+      "image": "roaring.png",
+      "membershipLevel": 3,
+      "tagline": "Family fun and local attractions"
+    }
+  ]
+}

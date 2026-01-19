@@ -1,0 +1,33 @@
+@media (min-width: 768px){
+  .nav-toggle{ display: none; }
+
+  .site-nav{
+    display: block;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .nav-list{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .nav-list a{
+    border-top: none;
+    border-radius: 8px;
+  }
+
+  .members-grid{
+    grid-template-columns: repeat(3, 1fr); /* like your screenshot */
+  }
+
+  .footer-inner{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  main h1{
+    font-size: 2.1rem;
+  }
+}

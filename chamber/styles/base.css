@@ -1,0 +1,251 @@
+:root{
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --border: #e2e2e2;
+}
+
+body{
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a{ color: var(--accent); }
+a:hover{ text-decoration: none; }
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Header / Nav */
+.site-header{
+  background: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brand-logo{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-name{
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-toggle{
+  margin-left: auto;
+  border: 2px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: #fff;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.site-nav{
+  width: 100%;
+  display: none; /* toggled open via JS */
+}
+
+.site-nav.open{ display: block; }
+
+.nav-list{
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.nav-list a{
+  display: block;
+  padding: 0.7rem;
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-list a.active,
+.nav-list a:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/* Main */
+.main-content{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h1{
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin: 0 0 0.75rem;
+}
+
+.directory-controls{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.directory-controls h2{
+  margin: 0 0 0.75rem;
+  color: var(--primary);
+}
+
+.view-buttons{
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.view-btn{
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--primary);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.view-btn.active{
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Members grid (default) */
+.members-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Member card */
+.member-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.member-header{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.member-logo{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.35rem;
+}
+
+.member-card h3{
+  margin: 0;
+  color: var(--primary);
+}
+
+.member-meta{
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.badge{
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #1b5fa7;
+  border: 1px solid #cfe6ff;
+}
+
+/* List view (no images) */
+.members-grid.list-view{
+  grid-template-columns: 1fr;
+}
+
+.members-grid.list-view .member-card{
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.members-grid.list-view .member-header{
+  margin-bottom: 0.25rem;
+}
+
+.members-grid.list-view .member-logo{
+  display: none; /* requirement: list view WITHOUT images */
+}
+
+.error{
+  color: #b00020;
+  margin: 1rem 0 0;
+}
+
+/* Footer */
+.site-footer{
+  background: var(--primary);
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.site-footer a{ color: #fff; }

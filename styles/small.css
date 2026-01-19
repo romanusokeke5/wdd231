@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  background: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.site_name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem;
+}
+
+.navigation ul {
+  list-style: none;
+  background: #34495e;
+  display: none;
+}
+
+.navigation li a {
+  display: block;
+  padding: 1rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  border-top: 1px solid #2c3e50;
+  transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+  background: #3498db;
+}
+
+.navigation ul.open {
+  display: block;
+}
+
+main {
+  padding: 1rem;
+}
+
+.hero h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-text h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about img {
+  max-height: 250px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.cert-courses h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #bdc3c7;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #3498db;
+  color: #fff;
+  border-color: #3498db;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-card {
+  border: 2px solid #bdc3c7;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.course-card.completed {
+  border-color: #27ae60;
+  background: #d5f4e6;
+}
+
+.course-card.completed h3 {
+  color: #27ae60;
+}
+
+#totalCredits {
+  font-weight: 700;
+  color: #3498db;
+  font-size: 1.1rem;
+}
+
+.footer {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social img {
+  height: 32px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.social a:hover img {
+  transform: scale(1.1);
+}
+
+.footer p {
+  margin: 0;
+}
+/* styles/small.css */
+
+/* Section Card Styling */
+.about, .student-photo, .cert-courses {
+  border: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  background-color: #f9f9f9;
+}
+
+/* Dark Header Bar for Sections */
+.about h2, .student-photo h2, .cert-courses h2 {
+  background-color: #2c3e50; /* Match your header color */
+  color: #ffffff;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0; /* Ensures it touches the top of the border */
+}
+
+/* Internal padding for text/images */
+.about p, .student-photo img {
+  padding: 1rem;
+}
+
+.student-photo img {
+  width: 100%;
+  max-width: 300px; /* Keeps it from getting too large */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}

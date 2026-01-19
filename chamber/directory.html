@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Directory | Chamber of Commerce</title>
+  <meta name="description" content="Explore member businesses in the Timbuktu Chamber of Commerce directory." />
+  <meta name="author" content="Okeke Romanus" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" />
+
+
+  <!-- Open Graph / Facebook -->
+  <!-- IMPORTANT: Replace the og:url and og:image URLs with YOUR GitHub Pages URL -->
+  <meta property="og:title" content="Chamber Directory" />
+  <meta property="og:description" content="Browse Chamber member businesses and connect with local services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://romanusokeke5.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:image" content="https://romanusokeke5.github.io/wdd231/chamber/images/og-directory.jpg" />
+
+  <!-- CSS (normalize first, then your styles) -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="Chamber of Commerce logo" loading="lazy" />
+        <span class="brand-name"> Chamber of Commerce</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="site-nav" aria-label="Primary" id="primary-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a class="active" aria-current="page" href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Single H1 inside MAIN (audit-friendly) -->
+    <h1>Directory | Chamber of Commerce</h1>
+
+    <section class="directory-controls" aria-label="Directory view controls">
+      <h2>Member Directory</h2>
+
+      <div class="view-buttons" role="group" aria-label="Choose directory layout">
+        <button id="gridBtn" type="button" class="view-btn active" aria-pressed="true">
+          Grid
+        </button>
+        <button id="listBtn" type="button" class="view-btn" aria-pressed="false">
+          List
+        </button>
+      </div>
+    </section>
+
+    <section class="directory-results" aria-label="Member results">
+      <div id="members" class="members-grid" aria-live="polite">
+        <!-- JS injects member cards here -->
+      </div>
+
+      <p id="directoryError" class="error" hidden>
+        Sorry—member data could not be loaded.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <section class="footer-contact">
+        <h2 class="visually-hidden">Contact</h2>
+        <p><strong> Chamber of Commerce</strong></p>
+        <p>Uyo, Nigeria</p>
+        <p><a href="tel:+2348100960353"> +2348100960353 </a></p>
+        <p><a href="romanusokeke501@gmail.com">romanusokeke501@gmail.com</a></p>
+      </section>
+
+      <section class="footer-meta">
+        <h2 class="visually-hidden">Site Info</h2>
+        <p>&copy; <span id="currentYear"></span> Okeke Romanus | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </section>
+    </div>
+  </footer>
+</body>
+  

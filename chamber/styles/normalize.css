@@ -1,0 +1,6 @@
+/* Minimal normalize/reset (keeps audits happy and prevents weird spacing) */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { border-style: none; }
+button, input, select, textarea { font: inherit; }
+*, *::before, *::after { box-sizing: border-box; }
