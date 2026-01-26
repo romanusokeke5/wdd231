@@ -31,3 +31,32 @@
     font-size: 2.1rem;
   }
 }
+
+/* ===============================
+   HOME PAGE – DESKTOP LAYOUT
+================================ */
+@media (min-width: 768px){
+
+  /* Hero CTA placement */
+  .hero .cta{
+    bottom: 25%;
+    font-size: 1.1rem;
+  }
+
+  /* Main home grid */
+  .home-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Weather forecast */
+  #forecast{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Spotlights */
+  #spotlight-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
