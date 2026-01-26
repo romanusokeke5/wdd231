@@ -3,61 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Boise Chamber of Commerce supporting local businesses and community growth.">
-  <meta name="author" content="Your Name">
-  <title>Boise Chamber of Commerce | Home</title>
 
+  <title>Boise Chamber of Commerce | Home</title>
+  <meta name="description" content="The Boise Chamber of Commerce supports local businesses, promotes economic growth, and strengthens our community.">
+  <meta name="author" content="Okeke Romanus">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Boise Chamber of Commerce – Supporting Local Business">
+  <meta property="og:description" content="Discover how the Boise Chamber of Commerce connects businesses, supports economic growth, and strengthens our local community.">
+  <meta property="og:image" content="https://yourgithubusername.github.io/wdd231/chamber/images/hero-large.jpg">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css">
 </head>
 
 <body>
-<header class="site-header" role="banner">
-    <div class="wrap site-header-inner">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Chamber of Commerce logo" width="55" height="55">
-        <span class="brand-name">Chamber of Commerce</span>
-      </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Boise Chamber of Commerce logo" class="brand-logo">
+      <span class="brand-name">Boise Chamber</span>
+    </a>
 
-      <button id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <button class="nav-toggle" id="menuBtn"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">☰</button>
 
-      <nav id="primaryNav" class="nav" role="navigation" aria-label="Primary Navigation">
-        <ul>
-          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="join.html">Join</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav id="primaryNav" class="site-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<main>
+<main class="main-content">
+  <!-- REQUIRED H1 -->
+  <h1>Boise Chamber of Commerce</h1>
+
   <!-- HERO -->
   <section class="hero">
     <picture>
       <source srcset="images/hero-large.jpg" media="(min-width: 800px)">
-      <img src="images/hero-small.jpg" alt="Downtown Boise" loading="lazy">
+      <img src="images/hero-small.jpg" alt="Downtown Boise skyline">
     </picture>
     <a href="join.html" class="cta">Join the Chamber</a>
   </section>
 
-  <!-- EVENTS -->
-  <section class="events">
-    <h2>Current Events</h2>
-    <p><strong>Feb 12:</strong> Business Networking Breakfast</p>
-    <p><strong>Mar 3:</strong> Economic Development Forum</p>
-  </section>
+  <div class="home-grid">
+    <!-- EVENTS -->
+    <section class="events">
+      <h2>Current Events</h2>
+      <p><strong>Feb 12:</strong> Business Networking Breakfast</p>
+      <p><strong>Mar 3:</strong> Economic Development Forum</p>
+    </section>
 
-  <!-- WEATHER -->
-  <section class="weather">
-    <h2>Weather</h2>
-    <p>Current Temperature: <span id="current-temp"></span></p>
-    <p id="weather-desc"></p>
-    <div id="forecast"></div>
-  </section>
+    <!-- WEATHER -->
+    <section class="weather">
+      <h2>Weather</h2>
+      <p>Current Temperature: <span id="current-temp">--</span>°F</p>
+      <p id="weather-desc"></p>
+      <div id="forecast"></div>
+    </section>
+  </div>
 
   <!-- SPOTLIGHTS -->
   <section class="spotlights">
@@ -66,18 +90,21 @@
   </section>
 </main>
 
-<footer class="site-footer" role="contentinfo" aria-label="Footer">
-    <div class="wrap">
-      <p>&copy; <span id="copyrightYear"></span>
-         Okeke Romanus| WDD 231 | Last modified: <span id="lastModified"></span>
-      </p>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>
+      &copy; <span id="copyrightYear"></span>
+      Okeke Romanus | WDD 231<br>
+      Last Modified: <span id="lastModified"></span>
+    </p>
+  </div>
+</footer>
 
-<script src="scripts/menu.js"></script>
-<script src="scripts/weather.js"></script>
-<script src="scripts/spotlights.js"></script>
-<script src="scripts/footer.js"></script>
-<script src="scripts/date.js"></script>
+<!-- JS (Deferred) -->
+<script src="scripts/menu.js" defer></script>
+<script src="scripts/weather.js" defer></script>
+<script src="scripts/spotlights.js" defer></script>
+<script src="scripts/footer.js" defer></script>
+<script src="scripts/date.js" defer></script>
 </body>
 </html>
