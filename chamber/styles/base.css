@@ -500,3 +500,39 @@ dialog::backdrop {
 
 /* Prevent dialog from going full width on tiny screens */
 dialog { max-width: 90vw; box-sizing: border-box; }
+
+.join-layout{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.join-form label{
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea{
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.membership-cards{
+  display: grid;
+  gap: 1rem;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn{
+  to{ opacity: 1; }
+}
