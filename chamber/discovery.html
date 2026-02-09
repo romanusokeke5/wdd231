@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Boise Chamber of Commerce | Discover</title>
+  <meta name="description" content="Discover Boise – attractions, demographics, and features that make our community a great place to live, visit, and do business.">
+  <meta name="author" content="Okeke Romanus">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Discover Boise – Chamber of Commerce">
+  <meta property="og:description" content="Explore Boise’s attractions, culture, and opportunities.">
+  <meta property="og:image" content="images/hero-large.jpg">
+  <meta property="og:url" content="https://romanusokeke5.github.io/wdd231/chamber/discover.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Boise Chamber of Commerce logo" class="brand-logo">
+      <span class="brand-name">Boise Chamber</span>
+    </a>
+
+    <button class="nav-toggle" id="menuBtn"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">☰</button>
+
+    <nav id="primaryNav" class="site-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+
+  <!-- REQUIRED H1 (SAME AS OTHER PAGES) -->
+  <h1>Boise Chamber of Commerce</h1>
+
+  <!-- VISIT MESSAGE -->
+  <section class="visit-message">
+    <p id="visitMessage"></p>
+  </section>
+
+  <!-- DISCOVER SECTION -->
+  <section class="discover">
+    <h2>Discover Boise</h2>
+
+    <!-- GRID AREA CONTAINER -->
+    <div id="discoverGrid" class="discover-grid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <dialog id="learnMoreDialog" aria-labelledby="dialogTitle">
+  <h2 id="dialogTitle"></h2>
+  <p id="dialogContent"></p>
+  <button id="closeDialog">Close</button>
+</dialog>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>
+      &copy; <span id="copyrightYear"></span>
+      Okeke Romanus | WDD 231<br>
+      Last Modified: <span id="lastModified"></span>
+    </p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="scripts/menu.js" defer></script>
+<script src="scripts/footer.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script type="module" src="scripts/discover.js"></script>
+</body>
+</html>

@@ -330,4 +330,78 @@ textarea:focus {
   #spotlight-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* VISIT MESSAGE */
+.visit-message {
+  background: #eef6ff;
+  border-left: 4px solid #3498db;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* GRID BASE */
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* CARD */
+.discover-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+
+/* MEDIUM SCREENS */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+
+  /* HOVER EFFECT (DESKTOP ONLY) */
+  .discover-card img:hover {
+    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+  }
+}
+
 }
