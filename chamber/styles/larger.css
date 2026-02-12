@@ -65,3 +65,10 @@
     grid-template-columns: 2fr 1fr;
   }
 }
+
+@media (min-width: 768px) {
+  .card {
+    grid-template-areas: "content image";
+    grid-template-columns: 2fr 1fr;
+  }
+}

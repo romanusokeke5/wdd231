@@ -403,5 +403,27 @@ textarea:focus {
     transition: all 0.3s ease;
   }
 }
+.site-nav {
+  display: none;
+}
+
+.site-nav.open {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #menuBtn {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+}
 
 }
