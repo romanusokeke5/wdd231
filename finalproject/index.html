@@ -17,10 +17,19 @@
   <meta property="og:url" content="https://romanusokeke5.github.io/finalproject/index.html">
   <meta property="og:type" content="website">
 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css">
 
 <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/storage.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
+  <script type="module" src="scripts/strategies.js" defer></script>
 </head>
 
 <body>
@@ -29,8 +38,8 @@
   <header class="site-header">
     <div class="wrap site-header-inner">
       <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Empire Academy logo" width="56" height="56">
         <!-- Replaced with simple text if image missing to prevent broken icon -->
-        <span style="color:var(--primary); font-size:1.5rem;">&#128200;</span>
         <span> Empire Academy</span>
       </a>
       <button id="menuBtn" aria-label="Open Navigation Menu">☰</button>
@@ -97,11 +106,5 @@
       <p class="muted">W06 Final Project</p>
     </div>
   </footer>
-
-  <script src="scripts/menu.js"></script>
-  <script src="scripts/footer.js"></script>
-  <script src="scripts/storage.js"></script>
-  <script src="scripts/modal.js"></script>
-  <script type="module" src="scripts/strategies.js"></script>
 </body>
 </html>

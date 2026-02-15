@@ -24,6 +24,13 @@
   <link rel="stylesheet" href="styles/larger.css">
 
   <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <script src="scripts/menu.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/storage.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
+  <script type="module" src="scripts/strategies.js" defer></script>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -126,125 +133,5 @@
       <p>&copy; <span id="copyrightYear"></span> Empire Academy — Okeke Romanus</p>
     </div>
   </footer>
-
-  <script src="scripts/menu.js" defer></script>
-  <script src="scripts/footer.js" defer></script>
-  <script src="scripts/tools.js" defer></script>
-  <script src="scripts/storage.js" defer></script>
-
-  <!-- Small progressive JS additions (safe if scripts/tools.js exists; otherwise they provide instant UX) -->
-  <script>
-    (function () {
-      // Position size calculator (basic)
-      function calcPositionSize(account, riskPct, stopPips, pipValue) {
-        // Risk in currency
-        const riskCurrency = (account * (riskPct / 100));
-        // if pipValue provided: position size (lots) = riskCurrency / (stopPips * pipValue)
-        // If pipValue omitted, we provide trade risk in currency instead.
-        if (pipValue && pipValue > 0 && stopPips > 0) {
-          return {
-            lots: +(riskCurrency / (stopPips * pipValue)).toFixed(4),
-            riskCurrency: +riskCurrency.toFixed(2)
-          };
-        } else {
-          return { lots: null, riskCurrency: +riskCurrency.toFixed(2) };
-        }
-      }
-
-      const accountInput = document.getElementById('accountSize');
-      const riskInput = document.getElementById('riskPercent');
-      const stopInput = document.getElementById('stopPips');
-      const pipValueInput = document.getElementById('pipValue');
-      const btnCalc = document.getElementById('calcPosition');
-      const resEl = document.getElementById('positionResult');
-      const resetCalc = document.getElementById('resetCalc');
-
-      btnCalc?.addEventListener('click', () => {
-        const account = parseFloat(accountInput.value) || 0;
-        const risk = parseFloat(riskInput.value) || 0;
-        const stop = parseFloat(stopInput.value) || 0;
-        const pipValue = parseFloat(pipValueInput.value) || 0;
-
-        const result = calcPositionSize(account, risk, stop, pipValue);
-        if (result.lots !== null) {
-          resEl.textContent = `Risk: $${result.riskCurrency} — Suggested position size: ${result.lots} lots (approx).`;
-        } else {
-          resEl.textContent = `Risk per trade: $${result.riskCurrency}. Provide pip value to calculate lots.`;
-        }
-      });
-
-      resetCalc?.addEventListener('click', () => {
-        accountInput.value = 1000;
-        riskInput.value = 1;
-        stopInput.value = 50;
-        pipValueInput.value = '';
-        resEl.textContent = 'Enter values and press Calculate.';
-      });
-
-      // Notes (localStorage)
-      const notes = document.getElementById('notes');
-      const saveNotes = document.getElementById('saveNotes');
-      const clearNotes = document.getElementById('clearNotes');
-      const notesStatus = document.getElementById('notesStatus');
-
-      // Load saved notes
-      try {
-        const saved = localStorage.getItem('amd_notes_v1');
-        if (saved) notes.value = saved;
-      } catch (e) { /* ignore */ }
-
-      saveNotes?.addEventListener('click', () => {
-        try {
-          localStorage.setItem('amd_notes_v1', notes.value);
-          notesStatus.textContent = 'Notes saved locally.';
-        } catch (e) {
-          notesStatus.textContent = 'Unable to save notes in this browser.';
-        }
-      });
-
-      clearNotes?.addEventListener('click', () => {
-        notes.value = '';
-        try {
-          localStorage.removeItem('amd_notes_v1');
-        } catch (e) { /* ignore */ }
-        notesStatus.textContent = 'Notes cleared.';
-      });
-
-      // Risk/Reward helper
-      const entry = document.getElementById('entryPrice');
-      const stop = document.getElementById('stopPrice');
-      const target = document.getElementById('targetPrice');
-      const calcRR = document.getElementById('calcRR');
-      const rrResult = document.getElementById('rrResult');
-      const resetRR = document.getElementById('resetRR');
-
-      calcRR?.addEventListener('click', () => {
-        const e = parseFloat(entry.value);
-        const s = parseFloat(stop.value);
-        const t = parseFloat(target.value);
-        if (!e || !s || !t) {
-          rrResult.textContent = 'Enter entry, stop and target prices to calculate R:R';
-          return;
-        }
-        // risk = abs(entry - stop), reward = abs(target - entry)
-        const risk = Math.abs(e - s);
-        const reward = Math.abs(t - e);
-        if (risk === 0) {
-          rrResult.textContent = 'Risk is zero — check your stop loss.';
-          return;
-        }
-        const ratio = +(reward / risk).toFixed(2);
-        rrResult.textContent = `Risk: ${risk} — Reward: ${reward} — R:R = ${ratio}:1`;
-      });
-
-      resetRR?.addEventListener('click', () => {
-        entry.value = '';
-        stop.value = '';
-        target.value = '';
-        rrResult.textContent = '';
-      });
-
-    })();
-  </script>
 </body>
 </html>
