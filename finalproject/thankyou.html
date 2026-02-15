@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You — Empire Academy</title>
+  <meta name="author" content="Okeke Romanus">
+
+   
+  <!-- Open Graph -->
+  <meta property="og:title" content="Empire Academy — Learn Trading Strategies">
+  <meta property="og:description" content="Educational trading site with strategies, tools, calculators and guided lessons to help you learn forex in a safe, structured way.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://romanusokeke5.github.io/finalproject/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="brand" href="index.html">Empire Academy</a>
+    </div>
+  </header>
+
+  <main class="wrap" style="text-align:center; padding-top:4rem;">
+    <h1 style="color:var(--primary);">Subscription Confirmed!</h1>
+    <p class="muted">We have received your details.</p>
+
+    <div style="background:var(--bg-card); padding:2rem; margin:2rem auto; max-width:500px; border-radius:8px; text-align:left;">
+      <h3>Your Submitted Data:</h3>
+      <ul id="results" style="margin-top:1rem; list-style:disc; padding-left:1.5rem;"></ul>
+    </div>
+
+    <a href="index.html" class="cta-btn">Return Home</a>
+  </main>
+
+  <script>
+    // JS to Parse URL Parameters
+    const params = new URLSearchParams(window.location.search);
+    const resultList = document.getElementById('results');
+    
+    // Loop through all entries
+    params.forEach((value, key) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong style="text-transform:capitalize">${key}:</strong> ${value}`;
+      resultList.appendChild(li);
+    });
+
+    if ([...params].length === 0) {
+      resultList.innerHTML = "<li>No data submitted. Did you use the form?</li>";
+    }
+  </script>
+</body>
+</html>

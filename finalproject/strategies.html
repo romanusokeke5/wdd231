@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strategies — Empire Academy</title>
+  <meta name="author" content="Okeke Romanus">
+  <meta name="description" content="Filter and search through our database of trading strategies.">
+
+   
+  <!-- Open Graph -->
+  <meta property="og:title" content="Empire Academy — Learn Trading Strategies">
+  <meta property="og:description" content="Educational trading site with strategies, tools, calculators and guided lessons to help you learn forex in a safe, structured way.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://romanusokeke5.github.io/finalproject/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="brand" href="index.html">
+        <span style="color:var(--primary); font-size:1.5rem;">&#128200;</span>
+        <span> Empire Academy</span>
+      </a>
+      <button id="menuBtn" aria-label="Toggle navigation">☰</button>
+      <nav id="primaryNav" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="strategies.html" class="active">Strategies</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1 style="margin: 2rem 0 1rem 0;">Strategy Bank</h1>
+    
+    <!-- Controls (Search/Filter) -->
+    <section class="controls" aria-label="Filter Controls">
+      <label>
+        Search
+        <input id="searchInput" type="search" placeholder="Type strategy name...">
+      </label>
+      <label>
+        Risk Level
+        <select id="riskFilter">
+          <option value="">All Levels</option>
+          <option value="low">Low Risk</option>
+          <option value="medium">Medium Risk</option>
+          <option value="high">High Risk</option>
+        </select>
+      </label>
+      <button id="clearFilters" type="button" class="cta-btn ghost">Clear</button>
+    </section>
+
+    <!-- Grid Layout -->
+    <div id="strategyList" class="strategy-grid">
+      <!-- Injected by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Modal Dialog -->
+  <dialog id="strategyModal">
+    <div id="modalContent"></div>
+    <form method="dialog" style="text-align:right; margin-top:1rem;">
+      <button class="cta-btn" style="background:var(--danger); color:white;">Close</button>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="copyrightYear"></span> Empire Academy</p>
+    </div>
+  </footer>
+
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script type="module" src="scripts/strategies.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Empire Academy | Learn Trading</title>
+  <meta name="author" content="Okeke Romanus">
+  <meta name="description" content="Master Forex trading strategies, risk management tools, and market analysis.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Empire Academy — Learn Trading Strategies">
+  <meta property="og:description" content="Educational trading site with strategies, tools, calculators and guided lessons to help you learn forex in a safe, structured way.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://romanusokeke5.github.io/finalproject/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+<link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="brand" href="index.html">
+        <!-- Replaced with simple text if image missing to prevent broken icon -->
+        <span style="color:var(--primary); font-size:1.5rem;">&#128200;</span>
+        <span> Empire Academy</span>
+      </a>
+      <button id="menuBtn" aria-label="Open Navigation Menu">☰</button>
+      <nav id="primaryNav" class="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="strategies.html">Strategies</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Master the Markets with Confidence</h1>
+      <p style="max-width:600px; margin:0 auto 1.5rem auto;" class="muted">
+        Access 15+ proven trading strategies, calculator tools, and live market data. 
+        Learn to trade professionally with risk management first.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a class="cta-btn" href="strategies.html">Browse Strategies</a>
+        <a class="cta-btn ghost" href="tools.html">Use Calculators</a>
+      </div>
+    </section>
+
+    <!-- Strategy Spotlight (Dynamic JS) -->
+    <section>
+      <h2>Featured Strategies</h2>
+      <p class="muted">Randomly selected picks from our database.</p>
+      <div id="spotlights" class="spotlight-grid">
+        <p>Loading strategies...</p>
+      </div>
+    </section>
+
+    <!-- Form Action Requirement -->
+    <section style="background:var(--bg-card); padding:2rem; border-radius:8px; margin-top:2rem;">
+      <h2>Join the Daily Newsletter</h2>
+      <p class="muted">Get market updates straight to your inbox.</p>
+      
+      <!-- This form sends data to thankyou.html using GET -->
+      <form action="thankyou.html" method="get" style="margin-top:1rem; max-width:400px;">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="trader@example.com" required>
+        
+        <label for="level">Experience Level</label>
+        <select id="level" name="level">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="pro">Pro</option>
+        </select>
+        
+        <button type="submit" class="cta-btn" style="border:none; cursor:pointer; width:100%;">Subscribe</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="copyrightYear"></span> Empire Academy — Built by Okeke Romanus</p>
+      <p class="muted">W06 Final Project</p>
+    </div>
+  </footer>
+
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script type="module" src="scripts/strategies.js"></script>
+</body>
+</html>
